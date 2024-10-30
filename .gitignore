@@ -1,4 +1,5 @@
 _build
+_ostree
 .secure_files
 *.tar.gz
 *.pem
