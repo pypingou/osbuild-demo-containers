@@ -1,0 +1,7 @@
+_build
+.secure_files
+*.tar.gz
+*.pem
+*.qcow2
+ostree-repo
+automotive-image-builder
