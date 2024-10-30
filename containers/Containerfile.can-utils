@@ -1,0 +1,6 @@
+FROM quay.io/centos/centos:stream9
+
+RUN dnf install -y 'dnf-command(copr)' && \
+    dnf copr enable -y @centos-automotive-sig/can-utils centos-stream-9-$(arch) && \
+    dnf install -y can-utils && \
+    dnf clean all

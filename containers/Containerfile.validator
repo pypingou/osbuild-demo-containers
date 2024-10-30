@@ -1,0 +1,6 @@
+FROM quay.io/centos/centos:stream9
+
+RUN dnf install -y 'dnf-command(copr)' && \
+    dnf copr enable -y @centos-automotive-sig/validator centos-stream+epel-next-9-$(arch) && \
+    dnf install -y validator && \
+    dnf clean all
